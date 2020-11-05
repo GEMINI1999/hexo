@@ -565,7 +565,7 @@
 <li>清屏 clear, ctrl + l</li>
 <li>创建文件夹 mkdir abc</li>
 <li>创建文件 touch abc</li>
-<li>设置权限 chmod 755 abc, chmod -x abc, chmod a+x abc, chmod a+w abc<br>注意<br>r 代表读权限，用数值4表示<br>w 代表写权限，用数字2表示<br>x 代表执行权限，用数字1表示<br>+ 代表增加权限<br>- 代表减少权限<br>因此755代表 rwxr-xr-x，7代表文件拥有者权限，5代表文件所属组权限，5代表文件组外权限<h2 id="find-4-1"><a href="#find-4-1" class="headerlink" title="find(4.1)"></a><strong>find(4.1)</strong></h2>用途：基于文件属性查找<br>用法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find [查找路径] 寻找条件 操作</span><br></pre></td></tr></table></figure>
+<li>设置权限 chmod 755 abc, chmod -x abc, chmod a+x abc, chmod a+w abc<br>注意<br>r 代表读权限，用数值4表示<br>w 代表写权限，用数字2表示<br>x 代表执行权限，用数字1表示<br>+ 代表增加权限<br>- 代表减少权限<br>因此755代表 rwxr-xr-x，7代表文件拥有者权限，5代表文件所属组权限，5代表文件组外权限<h2 id="find"><a href="#find" class="headerlink" title="find"></a><strong>find</strong></h2>用途：基于文件属性查找<br>用法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find [查找路径] 寻找条件 操作</span><br></pre></td></tr></table></figure>
 <h3 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-name</span><br><span class="line">-type f&#x2F;d(文件&#x2F;目录)</span><br><span class="line">-size +&#x2F;-30M(大于&#x2F;小于)</span><br><span class="line">-perm </span><br><span class="line">-exec</span><br><span class="line">-ok (比exec多一个询问)</span><br><span class="line">-maxdepth 指定搜索的目录层级</span><br></pre></td></tr></table></figure>
 <h3 id="exec参数详解"><a href="#exec参数详解" class="headerlink" title="-exec参数详解"></a>-exec参数详解</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">find [目录] -[参数] -exec [命令] &#123;&#125; \;</span><br><span class="line">find [目录] -[参数] -exec [命令] &#123;&#125; +</span><br><span class="line">分号和加号都是-exec参数的终结符</span><br><span class="line">\;  每找到一个，就执行一次[命令]</span><br><span class="line">+   找到多个，一次性执行[命令]</span><br></pre></td></tr></table></figure>
 <h3 id="exec特点"><a href="#exec特点" class="headerlink" title="-exec特点"></a>-exec特点</h3>这两种-exec中的tar命令的使用等效</li></ol>
@@ -724,19 +724,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">eNSP</a>
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">路由</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">kvm</a>
+                <a href="javascript:void(0)" class="js-tag color3">搜索</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -760,19 +752,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">搜索</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">运维</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">eNSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">路由</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">kvm</a>
               </li>
              
               <li class="article-tag-list-item">
