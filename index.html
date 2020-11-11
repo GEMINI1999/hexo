@@ -171,14 +171,9 @@
 
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 4. 启动，并设置为开机自动启动，测试</span></span><br><span class="line"><span class="comment"># 启动Docker服务</span></span><br><span class="line">systemctl start docker</span><br><span class="line"><span class="comment"># 设置开机自动启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment"># 测试</span></span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-Docker的中央仓库"><a href="#2-Docker的中央仓库" class="headerlink" title="2 Docker的中央仓库"></a>2 Docker的中央仓库</h3><ol>
-<li><p>Docker官方的中央仓库：这个仓库是镜像最全的，但是下载速度很慢。<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com</a></p>
-</li>
-<li><p>国内的镜像网站：网易蜂巢、daoCloud…</p>
-<p><a target="_blank" rel="noopener" href="https://c.163yun.com/hub#/home">https://c.163yun.com/hub#/home</a></p>
-<p><a target="_blank" rel="noopener" href="http://hub.daocloud.io/">http://hub.daocloud.io</a> (推荐使用)</p>
-</li>
-</ol>
+<h3 id="2-Docker的中央仓库"><a href="#2-Docker的中央仓库" class="headerlink" title="2 Docker的中央仓库"></a>2 Docker的中央仓库</h3><p>1.Docker官方的中央仓库：这个仓库是镜像最全的，但是下载速度很慢。<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com</a><br>2.国内的镜像网站：网易蜂巢、daoCloud…</p>
+<p> <a target="_blank" rel="noopener" href="https://c.163yun.com/hub#/home">https://c.163yun.com/hub#/home</a></p>
+<p> <a target="_blank" rel="noopener" href="http://hub.daocloud.io/">http://hub.daocloud.io</a> (推荐使用)</p>
 <h3 id="3-镜像操作"><a href="#3-镜像操作" class="headerlink" title="3 镜像操作"></a>3 镜像操作</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拉取镜像到本地</span></span><br><span class="line">docker pull 镜像名称[:tag]</span><br><span class="line"><span class="comment"># 拉取tomcat</span></span><br><span class="line">docker pull daocloud.io/library/tomcat:8.5.15-jre8</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 2. 查看全部本地的镜像</span></span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
@@ -404,7 +399,7 @@
 <blockquote>
 <p>-smp指定vcpu个数，-m指定内存大小，-hda指定磁盘，-net nic指定网卡，-net tap指定网桥</p>
 </blockquote>
-<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p><a target="_blank" rel="noopener" href="https://gemini1999.github.io/2020/11/11/Docker">见容器专题</a></p>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p><a target="_blank" rel="noopener" href="https://gemini1999.github.io/2020/11/11/Docker/">见容器专题</a></p>
 <h2 id="Windows常用命令"><a href="#Windows常用命令" class="headerlink" title="Windows常用命令"></a>Windows常用命令</h2><table>
 <thead>
 <tr>
@@ -890,6 +885,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">eNSP</a>
               </li>
              
@@ -927,10 +926,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">

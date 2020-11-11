@@ -16,7 +16,7 @@
 <meta property="og:description" content="Docker一 Docker基本操作安装Docker12# 1. 下载关于Docker的依赖环境yum -y install yum-utils device-mapper-persistent-data lvm2 12# 2. 设置一下下载Docker的镜像源yum-config-manager --add-repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;docker-ce&#x2F;lin">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-11T02:52:00.000Z">
-<meta property="article:modified_time" content="2020-11-11T02:54:40.471Z">
+<meta property="article:modified_time" content="2020-11-11T03:01:18.953Z">
 <meta property="article:author" content="Gemini1999">
 <meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
@@ -178,14 +178,9 @@
 
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 4. 启动，并设置为开机自动启动，测试</span></span><br><span class="line"><span class="comment"># 启动Docker服务</span></span><br><span class="line">systemctl start docker</span><br><span class="line"><span class="comment"># 设置开机自动启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> docker</span><br><span class="line"><span class="comment"># 测试</span></span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-Docker的中央仓库"><a href="#2-Docker的中央仓库" class="headerlink" title="2 Docker的中央仓库"></a>2 Docker的中央仓库</h3><ol>
-<li><p>Docker官方的中央仓库：这个仓库是镜像最全的，但是下载速度很慢。<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com</a></p>
-</li>
-<li><p>国内的镜像网站：网易蜂巢、daoCloud…</p>
-<p><a target="_blank" rel="noopener" href="https://c.163yun.com/hub#/home">https://c.163yun.com/hub#/home</a></p>
-<p><a target="_blank" rel="noopener" href="http://hub.daocloud.io/">http://hub.daocloud.io</a> (推荐使用)</p>
-</li>
-</ol>
+<h3 id="2-Docker的中央仓库"><a href="#2-Docker的中央仓库" class="headerlink" title="2 Docker的中央仓库"></a>2 Docker的中央仓库</h3><p>1.Docker官方的中央仓库：这个仓库是镜像最全的，但是下载速度很慢。<a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com</a><br>2.国内的镜像网站：网易蜂巢、daoCloud…</p>
+<p> <a target="_blank" rel="noopener" href="https://c.163yun.com/hub#/home">https://c.163yun.com/hub#/home</a></p>
+<p> <a target="_blank" rel="noopener" href="http://hub.daocloud.io/">http://hub.daocloud.io</a> (推荐使用)</p>
 <h3 id="3-镜像操作"><a href="#3-镜像操作" class="headerlink" title="3 镜像操作"></a>3 镜像操作</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拉取镜像到本地</span></span><br><span class="line">docker pull 镜像名称[:tag]</span><br><span class="line"><span class="comment"># 拉取tomcat</span></span><br><span class="line">docker pull daocloud.io/library/tomcat:8.5.15-jre8</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 2. 查看全部本地的镜像</span></span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
@@ -507,6 +502,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">eNSP</a>
               </li>
              
@@ -544,10 +543,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
