@@ -6,23 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>运维学习笔记 | Gemini1999的博客</title>
+  <title>Archives: 2020/11 | Gemini1999的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="运维常用命令 清屏 clear, ctrl + l 创建文件夹 mkdir abc 创建文件 touch abc 设置权限 chmod 755 abc, chmod -x abc, chmod a+x abc, chmod a+w abc注意r 代表读权限，用数值4表示w 代表写权限，用数字2表示x 代表执行权限，用数字1表示+ 代表增加权限- 代表减少权限因此755代表 rwxr-xr-x，7代">
-<meta property="og:type" content="article">
-<meta property="og:title" content="运维学习笔记">
-<meta property="og:url" content="http://yoursite.com/2020/07/30/operations/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Gemini1999的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2020/11/index.html">
 <meta property="og:site_name" content="Gemini1999的博客">
-<meta property="og:description" content="运维常用命令 清屏 clear, ctrl + l 创建文件夹 mkdir abc 创建文件 touch abc 设置权限 chmod 755 abc, chmod -x abc, chmod a+x abc, chmod a+w abc注意r 代表读权限，用数值4表示w 代表写权限，用数字2表示x 代表执行权限，用数字1表示+ 代表增加权限- 代表减少权限因此755代表 rwxr-xr-x，7代">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/07/30/operations/cut.png">
-<meta property="article:published_time" content="2020-07-30T09:35:00.000Z">
-<meta property="article:modified_time" content="2020-11-05T08:13:57.922Z">
 <meta property="article:author" content="Gemini1999">
-<meta property="article:tag" content="运维">
-<meta property="article:tag" content="shell">
+<meta property="article:tag" content="后端,java,jvm,程序员,Developer,Programmer,Coder">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/30/operations/cut.png">
   
     <link rel="alternative" href="/atom.xml" title="Gemini1999的博客" type="application/atom+xml">
   
@@ -146,399 +139,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-operations" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      运维学习笔记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+
+
+        <a href="/2020/11/11/Docker/" class="archive-article-date">
+  	<time datetime="2020-11-11T02:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-11</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/11/11/Docker/">容器</a>
     </h1>
   
 
-        
-        
-    <!-- 不蒜子统计 -->
-    <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-		  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-    </span>
-    
-
-
-        <a href="/2020/07/30/operations/" class="archive-article-date">
-  	<time datetime="2020-07-30T09:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="运维常用命令"><a href="#运维常用命令" class="headerlink" title="运维常用命令"></a><strong>运维常用命令</strong></h2><ol>
-<li>清屏 clear, ctrl + l</li>
-<li>创建文件夹 mkdir abc</li>
-<li>创建文件 touch abc</li>
-<li>设置权限 chmod 755 abc, chmod -x abc, chmod a+x abc, chmod a+w abc<br>注意<br>r 代表读权限，用数值4表示<br>w 代表写权限，用数字2表示<br>x 代表执行权限，用数字1表示<br>+ 代表增加权限<br>- 代表减少权限<br>因此755代表 rwxr-xr-x，7代表文件拥有者权限，5代表文件所属组权限，5代表文件组外权限<h2 id="find"><a href="#find" class="headerlink" title="find"></a><strong>find</strong></h2>用途：基于文件属性查找<br>用法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find [查找路径] 寻找条件 操作</span><br></pre></td></tr></table></figure>
-<h3 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-name</span><br><span class="line">-type f&#x2F;d(文件&#x2F;目录)</span><br><span class="line">-size +&#x2F;-30M(大于&#x2F;小于)</span><br><span class="line">-perm </span><br><span class="line">-exec</span><br><span class="line">-ok (比exec多一个询问)</span><br><span class="line">-maxdepth 指定搜索的目录层级</span><br></pre></td></tr></table></figure>
-<h3 id="exec参数详解"><a href="#exec参数详解" class="headerlink" title="-exec参数详解"></a>-exec参数详解</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">find [目录] -[参数] -exec [命令] &#123;&#125; \;</span><br><span class="line">find [目录] -[参数] -exec [命令] &#123;&#125; +</span><br><span class="line">分号和加号都是-exec参数的终结符</span><br><span class="line">\;  每找到一个，就执行一次[命令]</span><br><span class="line">+   找到多个，一次性执行[命令]</span><br></pre></td></tr></table></figure>
-<h3 id="exec特点"><a href="#exec特点" class="headerlink" title="-exec特点"></a>-exec特点</h3>这两种-exec中的tar命令的使用等效<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -type f -exec tar -czvf n.tar.gz &#123;&#125; +</span><br><span class="line">find . -type f -exec tar -uvf n.tar.gz &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-<h3 id="xargs"><a href="#xargs" class="headerlink" title="xargs"></a>xargs</h3>这种使用方式效果和上述两种方式一致<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -type f | xargs tar -czvf n.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="tar"><a href="#tar" class="headerlink" title="tar"></a><strong>tar</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf [压缩文件名] -C [指定卸压目录]（卸压）</span><br><span class="line">tar -czvf [压缩文件名] [要进行压缩的文件] （压缩）</span><br><span class="line">tar -uvf [压缩文件名] [要进行压缩的文件] （更新式压缩）</span><br><span class="line">tar -tvf [压缩文件名] （不卸压查看内容）</span><br><span class="line">--remove-files （在压缩完文件后删除源文件）</span><br></pre></td></tr></table></figure>
-<h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a><strong>sed</strong></h2><h3 id="s：字符替换"><a href="#s：字符替换" class="headerlink" title="s：字符替换"></a>s：字符替换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed &#39;s&#x2F;&#x2F;&#x2F;&#39; file</span><br><span class="line">sed &#39;s&#x2F;abc.net&#x2F;efg.com&#x2F;&#39; text.txt </span><br></pre></td></tr></table></figure>
-<h3 id="c：整行替换"><a href="#c：整行替换" class="headerlink" title="c：整行替换"></a>c：整行替换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed &#39;&#x2F;&#x2F;c&#x2F;&#39; file</span><br><span class="line">sed &#39;&#x2F;^SELINUX&#x3D;&#x2F;cSELINUX&#x3D;disabled&#x2F;&#39; file</span><br><span class="line">^代表开头</span><br></pre></td></tr></table></figure>
-<h3 id="g：全局替换"><a href="#g：全局替换" class="headerlink" title="g：全局替换"></a>g：全局替换</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed &#39;s&#x2F;&#x2F;&#x2F;g&#39; file</span><br><span class="line">sed &#39;s&#x2F;abc.net&#x2F;efg.com&#x2F;g&#39; test.txt</span><br></pre></td></tr></table></figure>
-<h3 id="n：定位到某一行"><a href="#n：定位到某一行" class="headerlink" title="-n：定位到某一行"></a>-n：定位到某一行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -n &#39;2p&#39; file （定位到第二行）</span><br><span class="line">sed -n &#39;&#x2F;broadcast&#x2F;p&#39; file （定位到&#x2F;broadcast这一行）</span><br></pre></td></tr></table></figure>
-<h3 id="e：允许在同一行命令中执行多个命令"><a href="#e：允许在同一行命令中执行多个命令" class="headerlink" title="-e：允许在同一行命令中执行多个命令"></a>-e：允许在同一行命令中执行多个命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -e &#39;&#x2F;&#x2F;&#x2F;&#39; -e &#39;&#x2F;&#x2F;&#x2F;&#39; file</span><br><span class="line">sed -e &#39;s&#x2F;11&#x2F;aa&#x2F;&#39; -e &#39;s&#x2F;bb&#x2F;gg&#x2F;&#39; file</span><br></pre></td></tr></table></figure>
-<h3 id="i：生效到文本；不加只是屏显测试结果"><a href="#i：生效到文本；不加只是屏显测试结果" class="headerlink" title="-i：生效到文本；不加只是屏显测试结果"></a>-i：生效到文本；不加只是屏显测试结果</h3><h3 id="sed可以同时对多个文件执行同一个’-‘"><a href="#sed可以同时对多个文件执行同一个’-‘" class="headerlink" title="sed可以同时对多个文件执行同一个’///‘"></a>sed可以同时对多个文件执行同一个’///‘</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed &#39;s&#x2F;aa&#x2F;11&#x2F;&#39; file1 file2 ...</span><br></pre></td></tr></table></figure>
-<h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a><strong>awk</strong></h2><h3 id="功能：报告生成器（不修改文本）"><a href="#功能：报告生成器（不修改文本）" class="headerlink" title="功能：报告生成器（不修改文本）"></a>功能：报告生成器（不修改文本）</h3></li>
-</ol>
-<ul>
-<li>行：record  </li>
-<li>列：field  </li>
-<li>NR：number of record  </li>
-<li>NF：number of field  </li>
-</ul>
-<p><strong><em>例：</em></strong>  </p>
-<h3 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;&#123;print $0&#125;&#39; access.log (打印所有列)</span><br><span class="line">awk &#39;&#123;print $1&#125;&#39; access.log (打印第一列)</span><br><span class="line">awk &#39;&#123;print $NF&#125;&#39; access.log (打印最后一列)</span><br><span class="line">awk &#39;&#123;print $NF-1&#125;&#39; access.log (最后一列-1)</span><br><span class="line">awk &#39;&#123;print $(NF-1)&#125;&#39; access.log (打印倒数第二列)</span><br></pre></td></tr></table></figure>
-<h3 id="列对齐："><a href="#列对齐：" class="headerlink" title="列对齐："></a>列对齐：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;&#123;print $1&quot; \t &quot;$2&quot; \t &quot;$3&#125;&#39; access.log (列对齐)</span><br><span class="line">awk &#39;&#123;print $1,$2,$3&#125;&#39; access.log (输出默认分隔符为逗号，代表一个空格，若把逗号改成空格，输出效果表现为空)</span><br><span class="line">echo 1:2 3*4|awk -F&quot;:&quot; &#39;&#123;print $1&#125;&#39; (-F表示指定输入分隔符，输入默认分隔符为空格)</span><br></pre></td></tr></table></figure>
-<h3 id="显示行数-列数："><a href="#显示行数-列数：" class="headerlink" title="显示行数/列数："></a>显示行数/列数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;&#123;print NR &quot;\t&quot; $0&#125;&#39; awk.txt (打印行号)</span><br><span class="line">awk &#39;&#123;print NF &quot;\t&quot; $0&#125;&#39; awk.txt (打印每行的列数)</span><br><span class="line">awk &#39;$2&#x3D;&#x3D;&quot;2012&quot;&#123;print $0&#125;&#39; staff.txt (当第二列的值&#x3D;&#x3D;2012时，打印这一行)</span><br><span class="line">awk &#39;&#123;print NF&#125;&#39; staff.txt (只打印每行的列数)</span><br><span class="line">awk &#39;&#123;print NR&#125;&#39; staff.txt (只打印每行的行号)</span><br><span class="line">awk &#39;NR&#x3D;&#x3D;&quot;3&quot;&#123;print NR,$0&#125;&#39; staff.txt (只打印第3行)</span><br><span class="line">awk &#39;NF&#x3D;&#x3D;&quot;5&quot;&#123;print $0&#125;&#39; staff.txt (只打印列数为5的行)</span><br><span class="line">注意：如果不指定文件名，awk会等待输入</span><br></pre></td></tr></table></figure>
-<h3 id="自定义分隔符"><a href="#自定义分隔符" class="headerlink" title="自定义分隔符"></a>自定义分隔符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;BEGIN&#123;FS&#x3D;&quot;,&quot;&#125;&#123;print $1&#125;&#39;</span><br><span class="line">BEGIN表示全局变量，FS表示输入分隔符，OFS表示输出分隔符</span><br><span class="line">awk默认的输入分隔符和输出分隔符是分别定义的</span><br><span class="line">awk &#39;BEGIN&#123;FS&#x3D;&quot;,&quot;;OFS&#x3D;&quot;,&quot;&#125;&#123;print $1,$2&#125;&#39;</span><br><span class="line"></span><br><span class="line">awk &#39;&#123;print NR,FILENAME,$0&#125;&#39; staff.txt data.txt (会把data的内容追加打印在staff的下方显示)</span><br></pre></td></tr></table></figure>
-<h3 id="隐藏某列内容"><a href="#隐藏某列内容" class="headerlink" title="隐藏某列内容"></a>隐藏某列内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;&#123;$3&#x3D;&quot;xxxx&quot;;print $0&#125;&#39; staff.txt</span><br></pre></td></tr></table></figure>
-<h3 id="awk做计算"><a href="#awk做计算" class="headerlink" title="awk做计算"></a>awk做计算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">awk &#39;&#123;a&#x3D;1;b&#x3D;3;print a+b&#125;&#39; (回车给出结果，但不结束)</span><br><span class="line">awk遇到字符：</span><br><span class="line">awk &#39;&#123;a&#x3D;2;b&#x3D;&quot;56ass&quot;;c&#x3D;3;print b+c&#125;&#39; (56+3&#x3D;59)</span><br><span class="line">awk &#39;&#123;a&#x3D;2;b&#x3D;&quot;ass56&quot;;c&#x3D;3;print b+c&#125;&#39; (3)</span><br></pre></td></tr></table></figure>
-
-<h2 id="grep-egrep"><a href="#grep-egrep" class="headerlink" title="grep/egrep"></a><strong>grep/egrep</strong></h2><h3 id="功能：基于文本内容的查找"><a href="#功能：基于文本内容的查找" class="headerlink" title="功能：基于文本内容的查找"></a>功能：基于文本内容的查找</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E等效于egrep</span><br></pre></td></tr></table></figure>
-<h3 id="排除-号行（注释）和空行"><a href="#排除-号行（注释）和空行" class="headerlink" title="排除#号行（注释）和空行"></a>排除#号行（注释）和空行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">egrep -v &quot;^$|#&quot; file (-v取反，^以什么开头，$以什么结尾，|或者)</span><br><span class="line">egrep -v &#39;(#|^$)&#39; file</span><br><span class="line">或者</span><br><span class="line">grep -Ev &quot;#|^$&quot; file</span><br></pre></td></tr></table></figure>
-<h3 id="查找目录下的所有文件中是否包含指定字符串"><a href="#查找目录下的所有文件中是否包含指定字符串" class="headerlink" title="查找目录下的所有文件中是否包含指定字符串"></a>查找目录下的所有文件中是否包含指定字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . | xargs grep -ri &quot;IBM&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="查找目录下的所有文件中是否包含指定字符串，并只打印文件名"><a href="#查找目录下的所有文件中是否包含指定字符串，并只打印文件名" class="headerlink" title="查找目录下的所有文件中是否包含指定字符串，并只打印文件名"></a>查找目录下的所有文件中是否包含指定字符串，并只打印文件名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . | xargs grep -ril &quot;IBM&quot;</span><br></pre></td></tr></table></figure>
-<h2 id="cut"><a href="#cut" class="headerlink" title="cut"></a><strong>cut</strong></h2><h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>文本/屏显的切割命令；能接收管道，也能直接操作文本，按行处理  </p>
-<ul>
-<li>默认以制表符为分隔符</li>
-<li>-b 按字节切割（1byte=8bit）</li>
-<li>-c 按字符切割（character，全角是2个byte，半角是1个byte）</li>
-<li>-f 按字段切割（field列）  </li>
-<li>-d 指定分隔符（输入、输出一样）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">who | cut -b 3 (切割who的输出，并只显示每行的第3个字符)</span><br></pre></td></tr></table></figure>
-<h3 id="范围的表示方法"><a href="#范围的表示方法" class="headerlink" title="范围的表示方法"></a>范围的表示方法</h3><table>
-<thead>
-<tr>
-<th>表示</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>N</td>
-<td>只有第N项</td>
-</tr>
-<tr>
-<td>N-</td>
-<td>从第N项一直到行尾</td>
-</tr>
-<tr>
-<td>N-M</td>
-<td>从第N项到第M项(包括M)</td>
-</tr>
-<tr>
-<td>-M</td>
-<td>从一行的开始到第M项(包括M)</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -d: -f 1,3-5,8- file.txt (-d指定分隔符:,-f指定输出第1列、3-5列、第8列及以后)</span><br></pre></td></tr></table></figure>
-<h3 id="cut和awk的一些区别"><a href="#cut和awk的一些区别" class="headerlink" title="cut和awk的一些区别"></a>cut和awk的一些区别</h3></li>
-<li>cut默认不会忽略空格和制表符(全是field字段)</li>
-<li>awk默认把空格、制表符看作分隔符(非field字段)<br><img src="/2020/07/30/operations/cut.png" alt="例子"><h3 id="cut如何输入制表符"><a href="#cut如何输入制表符" class="headerlink" title="cut如何输入制表符"></a>cut如何输入制表符</h3>先按ctrl+v，再按tab健，”\t”这种分隔符都是无效的<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a><strong>重定向</strong></h2></li>
-<li>标准输入0 standardinput STDIN</li>
-<li>标准输出1 standardoutput STDOUT</li>
-<li>标准错误2 standarderror STDERR<h3 id="标准输出重定向"><a href="#标准输出重定向" class="headerlink" title="标准输出重定向"></a>标准输出重定向</h3><table>
-<thead>
-<tr>
-<th>符号命令</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&gt; 或 1&gt;</td>
-<td>把<strong>标准输出</strong>重定向到新文件(会覆盖)，<strong>标准错误</strong>不适用</td>
-</tr>
-<tr>
-<td>&amp;&gt; 或 2&gt;</td>
-<td>标准错误输出</td>
-</tr>
-<tr>
-<td>&gt;&gt;</td>
-<td>追加，不覆盖原有文件</td>
-</tr>
-<tr>
-<td>&amp;&gt;&gt;</td>
-<td>标准错误追加</td>
-</tr>
-<tr>
-<td>2&gt;&amp;1</td>
-<td>将标准错误重定向到标准输出</td>
-</tr>
-<tr>
-<td>命令 &gt;&gt; 文件 2&gt;&amp;1 或 命令 &amp;&gt;&gt; 文件</td>
-<td>将标准输出与错误输出共同(追加)写入文件(不管命令执行结果如何)</td>
-</tr>
-<tr>
-<td>命令 &gt; 文件 2&gt;&amp;1 或 命令 &amp;&gt; 文件</td>
-<td>同上(不追加)</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl status httpd &gt; httpd (无屏显，内容存到httpd)</span><br><span class="line">systemctl status abc &gt; abc (屏显错误，abc存在并空白)</span><br></pre></td></tr></table></figure>
-tee : 类似于大于号，但<strong>只从管道(或输入重定向)接收数据</strong><br>tee -a : 类似于追加符(-a append)<br>tee和tee -a都会屏显，&gt;&gt;和&gt;不屏显<br>tee可以同时重定向到多个文件(而&gt;和&gt;&gt;没有这个功能，123 &gt; file1 file2 结果file1里面是123 file2)<br>命令1|tee file.txt|命令2: 将命令1的结果既保存到file.txt中，也传给命令2，并屏显命令2的结果(若有第三个管道，就正常传值)</li>
-</ul>
-<h3 id="标准输入重定向"><a href="#标准输入重定向" class="headerlink" title="标准输入重定向"></a>标准输入重定向</h3><table>
-<thead>
-<tr>
-<th>符号命令</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>&lt;</td>
-<td>指定输入文件</td>
-</tr>
-<tr>
-<td>&lt;&lt;</td>
-<td>等待用户输入，指定输入结束符</td>
-</tr>
-<tr>
-<td>tr</td>
-<td>只处理字符，而非单行单列，只显示处理结果，<strong>不修改源文件</strong>，<strong>只从管道(或输入重定向)接收数据</strong>(同tee)</td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; file &lt;&lt;end (一直等待输入，直到输入end)</span><br><span class="line">echo 1234 | tr 123 AB (结果为ABB4)</span><br><span class="line">echo 1::2::3 | tr -s : (-s压缩重复字符，结果为1:2:3)</span><br><span class="line">tr -d &quot;^$&quot; &lt; file (不能删除空行，因为tr只对字符操作)</span><br><span class="line">tr -d &quot; &quot; &lt; file (删除空格)</span><br><span class="line">tr 1-9 a-z &lt; file (数字变字母)</span><br></pre></td></tr></table></figure>
-<h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a><strong>sort</strong></h2><p>默认ASCII码排列，从左往右读取字符abcdefg</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-r</td>
-<td>倒排序</td>
-</tr>
-<tr>
-<td>-n</td>
-<td>按数字排列</td>
-</tr>
-<tr>
-<td>-t</td>
-<td>指定分隔符，如-t:指定分隔符为冒号</td>
-</tr>
-<tr>
-<td>-k</td>
-<td>指定列，如-k3n代表第3列按数字排序</td>
-</tr>
-</tbody></table>
-<h2 id="uniq"><a href="#uniq" class="headerlink" title="uniq"></a><strong>uniq</strong></h2><p>去除重复行<br>-c：去除重复行并统计重复行的数量</p>
-<h2 id="wc"><a href="#wc" class="headerlink" title="wc"></a><strong>wc</strong></h2><p>wc -l：统计行数</p>
-<h2 id="锚定符"><a href="#锚定符" class="headerlink" title="锚定符"></a><strong>锚定符</strong></h2><p>与正则的区别：锚定符前后不能有其他字符，正则可以有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\&lt;字符串\&gt;</span><br><span class="line">\b字符串\b</span><br></pre></td></tr></table></figure>
-<h2 id="head-tail"><a href="#head-tail" class="headerlink" title="head/tail"></a><strong>head/tail</strong></h2><p>head -5 前5行<br>tail -5 最后5行<br>tail -f 表示一直刷新最后的</p>
-<h2 id="shell脚本编写"><a href="#shell脚本编写" class="headerlink" title="shell脚本编写"></a><strong>shell脚本编写</strong></h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">if [ $# -ge 1 ];then</span><br><span class="line">        systemctl status $1 &amp;&gt; /dev/null</span><br><span class="line">        if [ $? -eq 0 ];then</span><br><span class="line">                echo &quot;$1 is `systemctl status $1|sed -n 3p|awk &#x27;&#123;print $2,$3&#125;&#x27;`&quot;</span><br><span class="line">        else</span><br><span class="line">                echo &quot;$1 服务不存在或未正常运行&quot;</span><br><span class="line">        fi</span><br><span class="line">else</span><br><span class="line">        echo &quot;请按如下格式执行命令:bash $0 服务名称&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">if [ $# -ge 1 ];then</span><br><span class="line">        for i in $@</span><br><span class="line">        do</span><br><span class="line">                systemctl status $i &amp;&gt; /dev/null</span><br><span class="line">                if [ $? -eq 0 ];then</span><br><span class="line">                        echo &quot;$i is `systemctl status $i|sed -n 3p|awk &#x27;&#123;print $2,$3&#125;&#x27;`&quot;</span><br><span class="line">                else</span><br><span class="line">                        echo &quot;$i 服务不存在或状态错误&quot;</span><br><span class="line">                fi</span><br><span class="line">        done</span><br><span class="line">else</span><br><span class="line">        echo &quot;请按如下格式执行命令:bash $0 服务名称&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">read -p &quot;Please input your record: &quot; cj</span><br><span class="line">if [ $cj -ge 0 ] &amp;&amp; [ $cj -le 59 ];then</span><br><span class="line">    echo &quot;补考&quot;</span><br><span class="line">elif [ $cj -ge 60 ] &amp;&amp; [ $cj -le 70 ];then</span><br><span class="line">    echo &quot;一般&quot;</span><br><span class="line">elif [ $cj -ge 71 ] &amp;&amp; [ $cj -le 85 ];then</span><br><span class="line">        echo &quot;良好&quot;</span><br><span class="line">elif [ $cj -ge 86 ] &amp;&amp; [ $cj -le 100 ];then</span><br><span class="line">        echo &quot;优秀&quot;</span><br><span class="line">else</span><br><span class="line">    echo &quot;Please input a valid record(0-100)&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">case $1 in</span><br><span class="line">1)</span><br><span class="line">        echo &quot;god bless me&quot;</span><br><span class="line">;;</span><br><span class="line">2)</span><br><span class="line">        echo &quot;cat is cute&quot;</span><br><span class="line">;;</span><br><span class="line">*)</span><br><span class="line">        echo &quot;bye&quot;</span><br><span class="line">;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">set -xv</span><br><span class="line">read -p &quot;Please input your number: &quot; NU</span><br><span class="line">[ $NU &#x3D; &quot;1&quot; ] &amp;&amp; echo &quot;You are the best&quot; || ([ $NU &#x3D; &quot;2&quot; ] &amp;&amp; echo &quot;Oh my god!&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="zabbix"><a href="#zabbix" class="headerlink" title="zabbix"></a><strong>zabbix</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">[zabbix-server]服务端：监控端，就是监控者</span><br><span class="line">rpm -Uvh https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;zabbix&#x2F;zabbix&#x2F;4.0&#x2F;rhel&#x2F;7&#x2F;x86_64&#x2F;zabbix-release-4.0-2.el7.noarch.rpm</span><br><span class="line">#上述操作还会在&#x2F;etc&#x2F;yum.repos.d&#x2F;下面生成一个新的仓库文件zabbix.repo</span><br><span class="line">#但这个文件还是指向zabbix官网，往往因为网络问题还是会导致下面的安装错误</span><br><span class="line">#所以，可以修改一下：</span><br><span class="line">sed -i &#39;s#http:&#x2F;&#x2F;repo.zabbix.com#https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;zabbix#&#39; &#x2F;etc&#x2F;yum.repos.d&#x2F;zabbix.repo</span><br><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br><span class="line">yum install deltarpm vim wget -y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">yum install -y zabbix-server-mysql zabbix-web-mysql mariadb-server</span><br><span class="line">systemctl enable mariadb --now</span><br><span class="line">mysql_secure_installation</span><br><span class="line">mysql -uroot -proot</span><br><span class="line">mysql&gt; create database zabbix character set utf8 collate utf8_bin;</span><br><span class="line">mysql&gt; grant all privileges on zabbix.* to zabbix@localhost identified by &#39;root&#39;;</span><br><span class="line">mysql&gt; quit;</span><br><span class="line">zcat &#x2F;usr&#x2F;share&#x2F;doc&#x2F;zabbix-server-mysql*&#x2F;create.sql.gz | mysql -uzabbix -proot zabbix</span><br><span class="line">mysql -uzabbix -proot -D zabbix -se &quot;show tables;&quot;</span><br><span class="line"></span><br><span class="line">sed -i.ori &#39;116a DBPassword&#x3D;root&#39; &#x2F;etc&#x2F;zabbix&#x2F;zabbix_server.conf</span><br><span class="line">sed -i.ori &#39;18a php_value date.timezone  Asia&#x2F;Shanghai&#39; &#x2F;etc&#x2F;httpd&#x2F;conf.d&#x2F;zabbix.conf</span><br><span class="line">systemctl disable firewalld --now</span><br><span class="line">setenforce 0;sed -i &#39;&#x2F;^SELINUX&#x3D;&#x2F;cSELINUX&#x3D;disabled&#39; &#x2F;etc&#x2F;selinux&#x2F;config</span><br><span class="line">systemctl enable zabbix-server --now</span><br><span class="line">systemctl enable httpd --now</span><br><span class="line"></span><br><span class="line">#解决web中文乱码：</span><br><span class="line">yum -y install wqy-microhei-fonts</span><br><span class="line">cp &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;wqy-microhei&#x2F;wqy-microhei.ttc &#x2F;usr&#x2F;share&#x2F;fonts&#x2F;dejavu&#x2F;DejaVuSans.ttf</span><br><span class="line"></span><br><span class="line">#浏览器打开：http:&#x2F;&#x2F;server的ip&#x2F;zabbix</span><br><span class="line">#账户：Admin&#x2F;zabbix</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[zabbix-agent]客户端：被监控端，就是被监控者，或者叫代理端</span><br><span class="line">#若agent和server同主机，下面步骤就不用重复操作了：</span><br><span class="line">rpm -Uvh https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;zabbix&#x2F;zabbix&#x2F;4.0&#x2F;rhel&#x2F;7&#x2F;x86_64&#x2F;zabbix-release-4.0-2.el7.noarch.rpm</span><br><span class="line">sed -i &#39;s#http:&#x2F;&#x2F;repo.zabbix.com#https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;zabbix#&#39; &#x2F;etc&#x2F;yum.repos.d&#x2F;zabbix.repo</span><br><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br><span class="line">yum install deltarpm vim wget -y</span><br><span class="line"></span><br><span class="line">#下面这一步是安装agent包，是必备操作，无论agent和server是否同主机：</span><br><span class="line">yum install -y zabbix-agent </span><br><span class="line"></span><br><span class="line">#下面这5步是在agent的配置文件上配置服务端的IP，若agent和server同主机，可做可不做：</span><br><span class="line">#请根据自己的实际情况，修改“zabbix服务端的IP”：</span><br><span class="line">sed -i.ori &#39;s#Server&#x3D;127.0.0.1#Server&#x3D;zabbix服务端的IP#&#39; &#x2F;etc&#x2F;zabbix&#x2F;zabbix_agentd.conf</span><br><span class="line">sed -i.ori &#39;s#ServerActive&#x3D;127.0.0.1#ServerActive&#x3D;zabbix服务端的IP#&#39; &#x2F;etc&#x2F;zabbix&#x2F;zabbix_agentd.conf</span><br><span class="line">sed -i &#39;&#x2F;^Hostname&#x3D;&#x2F;cHostname&#x3D;zabbix-agent1&#39; &#x2F;etc&#x2F;zabbix&#x2F;zabbix_agentd.conf</span><br><span class="line">systemctl disable firewalld --now</span><br><span class="line">setenforce 0;sed -i &#39;&#x2F;^SELINUX&#x3D;&#x2F;cSELINUX&#x3D;disabled&#39; &#x2F;etc&#x2F;selinux&#x2F;config</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#这一步是要做的：</span><br><span class="line">systemctl enable zabbix-agent --now</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">运维</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/30/operations/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/07/30/PAT/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PAT刷题总结
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%BB%B4%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">运维常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#find"><span class="toc-number">2.</span> <span class="toc-text">find</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-number">2.1.</span> <span class="toc-text">常用参数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exec%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3"><span class="toc-number">2.2.</span> <span class="toc-text">-exec参数详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exec%E7%89%B9%E7%82%B9"><span class="toc-number">2.3.</span> <span class="toc-text">-exec特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xargs"><span class="toc-number">2.4.</span> <span class="toc-text">xargs</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tar"><span class="toc-number">3.</span> <span class="toc-text">tar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sed"><span class="toc-number">4.</span> <span class="toc-text">sed</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#s%EF%BC%9A%E5%AD%97%E7%AC%A6%E6%9B%BF%E6%8D%A2"><span class="toc-number">4.1.</span> <span class="toc-text">s：字符替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c%EF%BC%9A%E6%95%B4%E8%A1%8C%E6%9B%BF%E6%8D%A2"><span class="toc-number">4.2.</span> <span class="toc-text">c：整行替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#g%EF%BC%9A%E5%85%A8%E5%B1%80%E6%9B%BF%E6%8D%A2"><span class="toc-number">4.3.</span> <span class="toc-text">g：全局替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n%EF%BC%9A%E5%AE%9A%E4%BD%8D%E5%88%B0%E6%9F%90%E4%B8%80%E8%A1%8C"><span class="toc-number">4.4.</span> <span class="toc-text">-n：定位到某一行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#e%EF%BC%9A%E5%85%81%E8%AE%B8%E5%9C%A8%E5%90%8C%E4%B8%80%E8%A1%8C%E5%91%BD%E4%BB%A4%E4%B8%AD%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%91%BD%E4%BB%A4"><span class="toc-number">4.5.</span> <span class="toc-text">-e：允许在同一行命令中执行多个命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#i%EF%BC%9A%E7%94%9F%E6%95%88%E5%88%B0%E6%96%87%E6%9C%AC%EF%BC%9B%E4%B8%8D%E5%8A%A0%E5%8F%AA%E6%98%AF%E5%B1%8F%E6%98%BE%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C"><span class="toc-number">4.6.</span> <span class="toc-text">-i：生效到文本；不加只是屏显测试结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sed%E5%8F%AF%E4%BB%A5%E5%90%8C%E6%97%B6%E5%AF%B9%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%E6%89%A7%E8%A1%8C%E5%90%8C%E4%B8%80%E4%B8%AA%E2%80%99-%E2%80%98"><span class="toc-number">4.7.</span> <span class="toc-text">sed可以同时对多个文件执行同一个’&#x2F;&#x2F;&#x2F;‘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awk"><span class="toc-number">5.</span> <span class="toc-text">awk</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A%E6%8A%A5%E5%91%8A%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%88%E4%B8%8D%E4%BF%AE%E6%94%B9%E6%96%87%E6%9C%AC%EF%BC%89"><span class="toc-number">5.1.</span> <span class="toc-text">功能：报告生成器（不修改文本）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">5.2.</span> <span class="toc-text">基本操作：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E5%AF%B9%E9%BD%90%EF%BC%9A"><span class="toc-number">5.3.</span> <span class="toc-text">列对齐：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E8%A1%8C%E6%95%B0-%E5%88%97%E6%95%B0%EF%BC%9A"><span class="toc-number">5.4.</span> <span class="toc-text">显示行数&#x2F;列数：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%9A%94%E7%AC%A6"><span class="toc-number">5.5.</span> <span class="toc-text">自定义分隔符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E6%9F%90%E5%88%97%E5%86%85%E5%AE%B9"><span class="toc-number">5.6.</span> <span class="toc-text">隐藏某列内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#awk%E5%81%9A%E8%AE%A1%E7%AE%97"><span class="toc-number">5.7.</span> <span class="toc-text">awk做计算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#grep-egrep"><span class="toc-number">6.</span> <span class="toc-text">grep&#x2F;egrep</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A%E5%9F%BA%E4%BA%8E%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E7%9A%84%E6%9F%A5%E6%89%BE"><span class="toc-number">6.1.</span> <span class="toc-text">功能：基于文本内容的查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%92%E9%99%A4-%E5%8F%B7%E8%A1%8C%EF%BC%88%E6%B3%A8%E9%87%8A%EF%BC%89%E5%92%8C%E7%A9%BA%E8%A1%8C"><span class="toc-number">6.2.</span> <span class="toc-text">排除#号行（注释）和空行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">6.3.</span> <span class="toc-text">查找目录下的所有文件中是否包含指定字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E5%B9%B6%E5%8F%AA%E6%89%93%E5%8D%B0%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-number">6.4.</span> <span class="toc-text">查找目录下的所有文件中是否包含指定字符串，并只打印文件名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cut"><span class="toc-number">7.</span> <span class="toc-text">cut</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD"><span class="toc-number">7.1.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8C%83%E5%9B%B4%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="toc-number">7.2.</span> <span class="toc-text">范围的表示方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cut%E5%92%8Cawk%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8C%BA%E5%88%AB"><span class="toc-number">7.3.</span> <span class="toc-text">cut和awk的一些区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cut%E5%A6%82%E4%BD%95%E8%BE%93%E5%85%A5%E5%88%B6%E8%A1%A8%E7%AC%A6"><span class="toc-number">7.4.</span> <span class="toc-text">cut如何输入制表符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">8.</span> <span class="toc-text">重定向</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">8.1.</span> <span class="toc-text">标准输出重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-number">8.2.</span> <span class="toc-text">标准输入重定向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sort"><span class="toc-number">9.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#uniq"><span class="toc-number">10.</span> <span class="toc-text">uniq</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#wc"><span class="toc-number">11.</span> <span class="toc-text">wc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%9A%E5%AE%9A%E7%AC%A6"><span class="toc-number">12.</span> <span class="toc-text">锚定符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#head-tail"><span class="toc-number">13.</span> <span class="toc-text">head&#x2F;tail</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99"><span class="toc-number">14.</span> <span class="toc-text">shell脚本编写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zabbix"><span class="toc-number">15.</span> <span class="toc-text">zabbix</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-    <!-- <div id="gitalk-container"></div> -->
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
-<div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>     
-<script type="text/javascript">
-    if (true) {
-        var gitalk = new Gitalk({
-            clientID: '0a1266465f94af452e3c',
-            clientSecret: '1f077381808ac6eb28c12ff70c76bd4c4faae307',
-            repo: 'GEMINI1999.github.io',
-            owner: 'GEMINI1999',
-            admin: ['GEMINI1999'],
-            id: 'Thu Jul 30 2020 17:35:00 GMT+0800',
-            distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')
-    }
-</script>
-  
-
-  <!--  -->
+    
 
 
           </div>
@@ -572,8 +229,8 @@ tee : 类似于大于号，但<strong>只从管道(或输入重定向)接收数�
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
