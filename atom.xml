@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-12-01T07:20:54.621Z</updated>
+  <updated>2020-12-01T07:34:21.465Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebSocket 远程端点处于[TEXT_FULL_WRITING]状态</title>
+    <link href="http://yoursite.com/2020/12/01/websocket_error/"/>
+    <id>http://yoursite.com/2020/12/01/websocket_error/</id>
+    <published>2020-12-01T07:30:00.000Z</published>
+    <updated>2020-12-01T07:34:21.465Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h3><p><img src="/2020/12/01/websocket_error/websocket_TEXT_FULL_WRITING.png" alt="error info"></p><h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><blockquote><p>当几个线程试图通过相同的会话（套接字）发送一些消息时，会抛出异常</p></blockquote><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><blockquote><p>代码同步，使用<code>getBasicRemote()</code>同步方法，使用<code>getAsyncRemote()</code>异步方法可能还是会有这个报错</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> (toSession) &#123;</span><br><span class="line">    log.info(<span class="string">&quot;服务端给客户端[&#123;&#125;]发送消息成功&#123;&#125;&quot;</span>, toSession.getId(), message);</span><br><span class="line">            toSession.getBasicRemote().sendText(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;报错信息&quot;&gt;&lt;a href=&quot;#报错信息&quot; class=&quot;headerlink&quot; title=&quot;报错信息&quot;&gt;&lt;/a&gt;报错信息&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/2020/12/01/websocket_error/websocket_TEXT_FULL_WRIT
+      
+    
+    </summary>
+    
+    
+    
+      <category term="websocket" scheme="http://yoursite.com/tags/websocket/"/>
+    
+      <category term="报错" scheme="http://yoursite.com/tags/%E6%8A%A5%E9%94%99/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringBoot集成mybatis、kafka、redis、websocket</title>
@@ -203,32 +229,6 @@
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WebSocket 远程端点处于[TEXT_FULL_WRITING]状态</title>
-    <link href="http://yoursite.com/2020/07/30/websocket_error/"/>
-    <id>http://yoursite.com/2020/07/30/websocket_error/</id>
-    <published>2020-07-30T10:30:00.000Z</published>
-    <updated>2020-12-01T07:31:58.680Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h3><p><img src="/2020/07/30/websocket_error/websocket_TEXT_FULL_WRITING.png" alt="error info"></p><h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><blockquote><p>当几个线程试图通过相同的会话（套接字）发送一些消息时，会抛出异常</p></blockquote><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><blockquote><p>代码同步，使用<code>getBasicRemote()</code>同步方法，使用<code>getAsyncRemote()</code>异步方法可能还是会有这个报错</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> (toSession) &#123;</span><br><span class="line">    log.info(<span class="string">&quot;服务端给客户端[&#123;&#125;]发送消息成功&#123;&#125;&quot;</span>, toSession.getId(), message);</span><br><span class="line">            toSession.getBasicRemote().sendText(message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;报错信息&quot;&gt;&lt;a href=&quot;#报错信息&quot; class=&quot;headerlink&quot; title=&quot;报错信息&quot;&gt;&lt;/a&gt;报错信息&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;/2020/07/30/websocket_error/websocket_TEXT_FULL_WRIT
-      
-    
-    </summary>
-    
-    
-    
-      <category term="websocket" scheme="http://yoursite.com/tags/websocket/"/>
-    
-      <category term="报错" scheme="http://yoursite.com/tags/%E6%8A%A5%E9%94%99/"/>
     
   </entry>
   
